@@ -1,0 +1,11 @@
+<div class="container mt-4">
+  <h1>Training Session Details</h1>
+  <p><strong>Date:</strong> <%= @training_session.date %></p>
+  <p><strong>Activity:</strong> <%= @training_session.activity %></p>
+  <p><strong>Duration:</strong> <%= @training_session.duration %> minutes</p>
+  <p><strong>Description:</strong> <%= @training_session.description %></p>
+
+  <%= link_to 'Back to Training Sessions', training_sessions_path, class: 'btn btn-primary' %>
+  <%= link_to 'Edit', edit_training_session_path(@training_session), class: 'btn btn-warning' %>
+  <%= link_to 'Delete', training_session_path(@training_session), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+</div>
